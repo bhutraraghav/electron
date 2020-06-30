@@ -27,6 +27,7 @@ const { app } = require('electron')
 app.clearRecentDocuments()
 ```
 
+
 __Adding Recent documents in Menuitem (For Mac):__
 
 ![menu item Files][menu-item-image]
