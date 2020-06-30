@@ -27,6 +27,30 @@ const { app } = require('electron')
 app.clearRecentDocuments()
 ```
 
+__Adding Recent documents in Menuitem (For Mac):__
+
+![menu item Files][menu-item-image]
+
+You can add recent documents in the menu item along with the clear recent submenu by adding the the following code to the menu array. 
+
+```javascript
+{
+          label: 'file',
+          submenu: [{
+          label: 'Open Recent',
+          role: 'recentdocuments',
+          submenu: [
+            {
+              label: 'Clear Recent',
+              role: 'clearrecentdocuments'
+            }
+          ]
+          },]
+    },
+    
+```
+
+
 ## Windows Notes
 
 In order to be able to use this feature on Windows, your application has to be
@@ -47,3 +71,4 @@ of `app` module will be emitted for it.
 [addrecentdocument]: ../api/app.md#appaddrecentdocumentpath-macos-windows
 [clearrecentdocuments]: ../api/app.md#appclearrecentdocuments-macos-windows
 [app-registration]: https://msdn.microsoft.com/en-us/library/cc144104(VS.85).aspx
+[menu-item-image]: https://user-images.githubusercontent.com/3168941/33003655-ea601c3a-cd70-11e7-97fa-7c062149cfb1.png
