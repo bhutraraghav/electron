@@ -37,18 +37,15 @@ You can add recent documents in the menu item along with the clear recent submen
 ```javascript
 {
           label: 'file',
-          submenu: [{
-          label: 'Open Recent',
-          role: 'recentdocuments',
-          submenu: [
-            {
-              label: 'Clear Recent',
-              role: 'clearrecentdocuments'
-            }
-          ]
-          },]
-    },
-    
+    submenu: [{
+        label: 'Open Recent',
+        role: 'recentdocuments',
+        submenu: [{
+            label: 'Clear Recent',
+            role: 'clearrecentdocuments'
+        }]
+    }, ]
+    }    
 ```
 
 
